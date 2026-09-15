@@ -4,6 +4,8 @@ title: Harfio Terms of Use
 
 # Harfio Terms of Use
 
+[Türkçe sürüm](./kullanim-sartlari)
+
 Effective date: 15 September 2026
 Provider: Tolga Sayan (individual developer; App Store seller name), tolgasayan@icloud.com
 

@@ -4,6 +4,8 @@ title: Harfio Gizlilik Politikası
 
 # Harfio Gizlilik Politikası
 
+[English version](./privacy)
+
 Yürürlük tarihi: 15 Eylül 2026
 Veri sorumlusu: Tolga Sayan (bireysel geliştirici; App Store satıcı adı)
 İletişim: tolgasayan@icloud.com

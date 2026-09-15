@@ -4,6 +4,8 @@ title: Harfio Kullanım Şartları
 
 # Harfio Kullanım Şartları
 
+[English version](./terms)
+
 Yürürlük tarihi: 15 Eylül 2026
 Sağlayıcı: Tolga Sayan (bireysel geliştirici; App Store satıcı adı), tolgasayan@icloud.com
 

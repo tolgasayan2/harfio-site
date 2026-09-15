@@ -4,6 +4,8 @@ title: Harfio Privacy Policy
 
 # Harfio Privacy Policy
 
+[Türkçe sürüm](./gizlilik)
+
 Effective date: 15 September 2026
 Data controller: Tolga Sayan (individual developer; App Store seller name)
 Contact: tolgasayan@icloud.com
