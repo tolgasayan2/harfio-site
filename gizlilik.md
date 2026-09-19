@@ -20,6 +20,9 @@ Aşağıdaki yarış özellikleri dışında şu veriler cihazınızda saklanır
 - günlük yeni tur hakkının kullanım kaydı.
 Uygulamayı sildiğinizde bu veriler cihazınızdan silinir. Yedekleme ayarlarınız açıksa Apple'ın cihaz yedeklemesine dahil olabilir; bu yedekleme Apple'ın koşullarına tabidir.
 
+### Hatırlatma bildirimleri
+Nerola isteğe bağlı olarak yerel hatırlatma bildirimleri gönderebilir. Bunu yalnız siz açarsınız (ilk açılıştaki "Hatırlatma ister misin?" ekranı veya ana ekran menüsündeki "Çarkı bana hatırlat"); iOS'un bildirim izni ayrıca sorulur. Hatırlatmalar tamamen cihazınızda planlanır: son kullanımınızdan 24 saat sonra bir bildirim, geri dönmezseniz 2., 3. ve 7. günde birer tane daha, sonra durur; uygulamayı her açtığınızda süre yeniden başlar. Push bildirimi, sunucu, cihaz bildirim jetonu veya kullanım verisi aktarımı yoktur; metinler uygulama dilinde hazır cümlelerdir. Menüden istediğiniz zaman kapatabilirsiniz.
+
 ## 2. Yazılı cevaplar
 Cevaplarınızı klavyeyle harf boşluklarına yazarsınız. Nerola yazdığınız kelimeleri cihazınızda değerlendirir. Uygulama mikrofon veya konuşma tanıma izni istemez, mikrofonu açmaz ve tanıma amacıyla ses göndermez. Tek kişilik turlardaki yazılı cevaplar yerel tur geçmişinizde kalır. Arkadaş yarışındaki cevaplar ayrıca aşağıda açıklanan yarış hizmetine gönderilir; cevaplar analiz hizmetine gönderilmez. iOS'un veya yüklediğiniz klavyenin sunduğu özellikler, ilgili sağlayıcının ayarlarına ve gizlilik politikasına tabidir.
 
@@ -32,7 +35,7 @@ Oda kayıtları oluşturulduktan sonra en geç 24 saatte silinir; başlamayan od
 Game Center kullanırsanız günlük yarışma puanı Apple'a gönderilir ve Game Center oyuncu kimliğinizle ilişkilendirilir. Sıralamadaki görünürlüğünüz Game Center ayarlarınıza bağlıdır. Tek tek yazılı cevaplar Game Center'a gönderilmez.
 
 ## 3. Telaffuz sesleri
-Sözlükteki telaffuz sesleri cihazınızın kendi seslendirme motoruyla üretilir; bunun için ağ bağlantısı kullanılmaz.
+1.0 sürümünde telaffuz cihazın kendi ses sentezleyicisiyle çalışır. 1.1 sürümünden itibaren belirli İngilizce kelime ve hikâye kayıtları ElevenLabs ile önceden üretilip uygulamaya eklenir. Dinleme sırasında bu dosyalar cihazınızda çalınır; metniniz, cevaplarınız veya kimliğiniz ElevenLabs'e gönderilmez. Diğer aksanlar, kaydı bulunmayan metinler ve yeni üretilmiş hikâye anlatımları cihazın ses sentezleyicisini kullanır. Ses dinlemek için ağ bağlantısı gerekmez.
 
 ## 4. Satın almalar ve Nerola Plus
 Nerola Plus'ı satın alırsanız ödeme Apple App Store üzerinden yapılır; kart bilgileriniz bize ulaşmaz. Satın alma ve Plus erişim durumunu yönetmek için iki hizmet sağlayıcı kullanırız:
@@ -44,10 +47,20 @@ Sağlayıcıların SDK'ları çalışmak için ayrıca şu verileri işler:
 - RevenueCat: App Store satın alma makbuzu ve Plus erişim durumu, uygulama sürümü, cihaz platformu ve işletim sistemi sürümü. RevenueCat bu verileri satın alma doğrulaması ve kendi panelindeki toplu istatistikler için işler; reklam kimliği (IDFA) toplanmaz.
 - Superwall: teklif ekranını hangi cihazlara göstereceğine karar vermek ve teklif ekranı istatistiklerini tutmak için cihaz özellikleri (Apple'ın uygulama satıcısına özgü cihaz kimliği, cihaz modeli, işletim sistemi sürümü, dil ve bölge, saat dilimi, uygulama sürümü ve kurulum tarihi, ağ türü, düşük güç modu, açık/koyu görünüm), teklif ekranıyla etkileşimler (görüntüleme, kapatma, satın alma denemesi) ve Plus erişim durumu. Superwall, isteğin geldiği IP adresinden yaklaşık ülke/bölge/şehir çıkarabilir; bu bilgi hassas konum değildir ve uygulama konum izni istemez.
 Mevcut uygulama entegrasyonu bu verileri reklam amacıyla veya Apple'ın tanımındaki uygulamalar arası izleme için kullanmaz. Sağlayıcıların işlemesi için: [RevenueCat gizlilik politikası](https://www.revenuecat.com/privacy) ve [veri işleme eki](https://www.revenuecat.com/dpa); [Superwall gizlilik politikası](https://superwall.com/legal/privacy-policy) ve [veri işleme eki](https://superwall.com/legal/dpa). Sağlayıcılar bu verileri kendi politikalarındaki sürelerle saklar; satın alma kaydınızın silinmesini isterseniz 7. bölümdeki adrese yazın, talebi sağlayıcılara iletiriz.
-Ücretsiz sürümde sözlük, telaffuz dinleme, öğrenme listesi ve rozetler herkes için açıktır; Plus yalnız günlük yeni tur sınırını kaldırır.
+Ücretsiz sürümde sözlük, telaffuz dinleme, öğrenme listesi ve rozetler herkes için açıktır; Plus günlük yeni tur sınırını kaldırır ve A2, B1, B2, C1 seviyelerinde ilk üç bölümden sonraki bölümleri açar. A1 bölüm yolu ücretsiz kalır.
 
 ## 5. Reklam, izleme ve analitik
-Nerola reklam göstermez, reklam ağlarıyla veri paylaşmaz ve sizi uygulamalar veya web siteleri arasında izlemez (Apple'ın "izleme" tanımı anlamında). Uygulamanın kendi kullanım analitiği veya çökme raporlama hizmeti yoktur: oyun içi davranışınız, cevaplarınız veya sesiniz hiçbir analitik servise gönderilmez. Bunun tek istisnası 4. bölümdeki satın alma sağlayıcılarıdır: satın alma ve teklif ekranı verileri, App Store gizlilik beyanında "Analitik" amacıyla da bildirilir, çünkü sağlayıcılar bunlardan toplu istatistik üretir. Yeni bir analitik veya çökme hizmeti eklenirse bu politika güncellenir ve uygulama içinde duyurulur.
+Nerola reklam göstermez, reklam ağlarıyla veri paylaşmaz ve sizi uygulamalar veya web siteleri arasında izlemez (Apple'ın "izleme" tanımı anlamında).
+
+**Sürüm 1.0:** Uygulamanın kendi kullanım analitiği veya çökme raporlama hizmeti yoktur; oyun içi davranışınız, cevaplarınız veya sesiniz hiçbir analitik servise gönderilmez. Tek istisna 4. bölümdeki satın alma sağlayıcılarıdır: satın alma ve teklif ekranı verileri App Store gizlilik beyanında "Analitik" amacıyla da bildirilir.
+
+**Sürüm 1.1'den itibaren — kullanım analitiği (yalnız izninizle):** Nerola, uygulamayı geliştirmek için PostHog (PostHog Inc., Avrupa Birliği'nde barındırılan proje) ile ürün analitiği toplayabilir. Bu yalnız uygulama içindeki "Nerola'yı geliştirmemize yardım et" ekranında **Kullanım verisi paylaş** seçeneğini onaylamanız hâlinde başlar; karar verilene kadar ve **Paylaşma** seçilirse hiçbir şey gönderilmez. Kararınızı ana ekran menüsünden istediğiniz zaman değiştirebilirsiniz; kapattığınızda gönderim durur ve kapalı dönemdeki kullanım sonradan yüklenmez.
+
+Gönderilenler: oturum başlangıcı, karşılama ve seviye seçimi, bir çarkın/bölümün/hikâyenin/günlük çarkın/arkadaş yarışının başlatılıp bitirilmesi (içerik kimliği, tekrar oynama, aktif süre ve toplu doğru/yanlış/pas sayısı), Plus teklifinin gösterilmesi ve satın alma sonucu (başlatıldı, beklemede, iptal, hata kategorisi, doğrulanmış başarı, geri yükleme), davet bağlantısının açılması; ayrıca uygulama sürümü, işletim sistemi sürümü, cihaz modeli, arayüz dili, saat dilimi ve ekran boyutu gibi teknik bağlam. Bu veriler kuruluma özgü **rastgele bir analitik kimliğiyle** ilişkilendirilir; bu kimlik sizi doğrudan tanımlamaz ama kalıcı olduğu için tamamen anonim veri sayılmaz. Paylaşımı kapatıp yeniden açarsanız yeni bir kimlik üretilir.
+
+Gönderilmeyenler: yazdığınız cevaplar, sözlük aramaları, oda kodları, davet bağlantıları, adınız, e-postanız, Game Center kimliğiniz, reklam veya cihaz kimlikleri, ses ve ekran görüntüleri. IP adresinden konum türetilmesi kapalıdır; oturum kaydı, otomatik ekran/tıklama yakalama ve anketler kullanılmaz. Sağlayıcı bilgisi: [PostHog gizlilik politikası](https://posthog.com/privacy) ve [veri işleme eki](https://posthog.com/dpa). Kullanım olayları mevcut ücretsiz PostHog planında en fazla bir yıl saklanır. Paylaşımı kapatmak cihazdaki gönderilmemiş kuyruğu siler; daha önce gönderilen sunucu kayıtlarını kendiliğinden silmez. Analitik verileriyle ilgili talepler için 7. bölümdeki iletişim adresini kullanabilirsiniz.
+
+Kararınızı verene kadar en fazla 50 kullanım olayı yalnız o açık oturumun belleğinde bekleyebilir; onaylarsanız gönderilir, reddederseniz veya uygulama kapanırsa silinir.
 
 ## 6. Çocuklar
 Nerola genel kitleye yöneliktir ve 13 yaşın altındaki çocuklara yönelik tasarlanmamıştır. Uygulama e-posta veya konum istemez. İsteğe bağlı arkadaş yarışında görünen bir ad istenir. 4. bölümdeki rastgele kimliğin bir çocuğa ait olduğunu düşünüyorsanız 7. bölümdeki adrese yazın; kaydı sildiririz.
